@@ -18,12 +18,9 @@ public class WeightedMean {
         int[] weightArray = Arrays.stream(data.split(" ")).mapToInt(Integer::parseInt).toArray();
 
         double weight = 0;
-        for(int i=0; i<n; i++) {
-            weight += weightArray[i];
-        }
-
         double sum = 0;
         for(int i=0; i<n; i++) {
+            weight += weightArray[i];
             sum += integerArray[i] * weightArray[i];
         }
                 
