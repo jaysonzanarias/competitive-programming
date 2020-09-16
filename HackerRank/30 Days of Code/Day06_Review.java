@@ -12,11 +12,11 @@ public class Day06_Review {
         int n = s.nextInt();
         s.nextLine();
 
+        String toTest = "";
+        String even = "";
+        String odd = "";
         while (s.hasNext()) {
-            String even = "";
-            String odd = "";
-
-            String toTest = s.nextLine();
+            toTest = s.nextLine();
 
             for (int i = 0; i < toTest.length(); i++) {
                 if (i % 2 == 0)
@@ -26,6 +26,8 @@ public class Day06_Review {
             }
 
             System.out.println(even + " " + odd);
+            even = "";
+            odd = "";
         }
     }
 }
